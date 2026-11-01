@@ -85,22 +85,22 @@ flowchart LR
     User[Користувач]
 
     subgraph System[Веб-платформа музичних колекцій]
-        Client[Клієнт React]
+        Client[Клієнт<br/>React]
 
         subgraph Server[Сервер Node.js, один процес]
-            Controllers[Контролери Express]
+            Controllers[Контролери<br/>Express]
             Validation[Валідація]
             Catalog[Сервіс каталогу]
             Rating[Сервіс оцінювання]
             Stats[Сервіс статистики]
-            Users["Сервіс користувачів, відкладено"]
+            Users["Сервіс користувачів<br/>відкладено"]
             Data[Доступ до даних Prisma]
         end
 
         DB[(PostgreSQL)]
     end
 
-    Api["Зовнішній музичний API, відкладено"]
+    Api["Зовнішній музичний API<br/>відкладено"]
 
     User --> Client
     Client -->|HTTP і JSON| Controllers
