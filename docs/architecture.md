@@ -90,17 +90,17 @@ flowchart LR
         subgraph Server[Сервер Node.js, один процес]
             Controllers[Контролери<br/>Express]
             Validation[Валідація]
-            Catalog[Сервіс каталогу]
-            Rating[Сервіс оцінювання]
-            Stats[Сервіс статистики]
-            Users["Сервіс користувачів<br/>відкладено"]
-            Data[Доступ до даних Prisma]
+            Catalog[Сервіс<br/>каталогу]
+            Rating[Сервіс<br/>оцінювання]
+            Stats[Сервіс<br/>статистики]
+            Users["Сервіс<br/>користувачів<br/>відкладено"]
+            Data[Доступ<br/>до даних]
         end
 
         DB[(PostgreSQL)]
     end
 
-    Api["Зовнішній музичний API<br/>відкладено"]
+    Api["Зовнішній<br/>музичний API<br/>відкладено"]
 
     User --> Client
     Client -->|HTTP і JSON| Controllers
